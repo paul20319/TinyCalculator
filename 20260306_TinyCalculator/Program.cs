@@ -30,15 +30,15 @@
         }
         static int ReadAndCheckOperator(int countOperator)
         {
-            int a = 0;
+            int operand = 0;
             bool ok = false;
             do
             {
                 Console.Write($"Operand {countOperator}: ");
-                ok = int.TryParse(Console.ReadLine(), out a);
+                ok = int.TryParse(Console.ReadLine(), out operand);
             } while (!ok);
 
-            return a;
+            return operand;
         }
     }
 }
