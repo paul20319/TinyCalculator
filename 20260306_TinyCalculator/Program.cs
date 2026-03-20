@@ -12,9 +12,13 @@
             Console.Write("Summand 2: ");
             int b = Convert.ToInt32(Console.ReadLine());
 
+            Console.ForegroundColor = ConsoleColor.Green;
             Console.WriteLine($"{a} + {b} = {a+b}");
+            Console.ForegroundColor = ConsoleColor.Blue;
             Console.WriteLine($"{a} - {b} = {a-b}");
+            Console.ForegroundColor = ConsoleColor.DarkBlue;
             Console.WriteLine($"{a} * {b} = {a*b}");
+            Console.ForegroundColor = ConsoleColor.Cyan;
             if (b == 0)
             {
                 Console.WriteLine($"{a} / {b} = undefiniert/unendlich");
@@ -23,6 +27,7 @@
             {
                 Console.WriteLine($"{a} / {b} = {a / b}");
             }
+            Console.ResetColor();
 
         }
     }
