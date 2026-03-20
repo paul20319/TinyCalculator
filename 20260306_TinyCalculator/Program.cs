@@ -30,7 +30,6 @@
         }
         static int ReadAndCheckOperator(int countOperator)
         {
-            Console.Write($"Operand {countOperator}: ");
             int a = 0;
             bool ok = false;
             do
