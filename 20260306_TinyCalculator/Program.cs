@@ -6,9 +6,14 @@
         {
             Console.WriteLine("Tiny calculator");
 
-            int a = 5;
-            int b = 10;
+            Console.Write("Summand 1: ");
+            int a = Convert.ToInt32(Console.ReadLine());
+
+            Console.Write("Summand 2: ");
+            int b = Convert.ToInt32(Console.ReadLine());
+
             Console.WriteLine($"{a} + {b} = {a+b}");
+
         }
     }
 }
