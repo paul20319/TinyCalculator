@@ -7,10 +7,20 @@
             Console.WriteLine("Tiny calculator");
 
             Console.Write("Summand 1: ");
-            int a = Convert.ToInt32(Console.ReadLine());
+            int a = 0;
+            bool ok = false;
+            do
+            {
+                ok = int.TryParse(Console.ReadLine(), out a);
+            } while (!ok);
 
             Console.Write("Summand 2: ");
-            int b = Convert.ToInt32(Console.ReadLine());
+            int b = 0;
+            ok = false;
+            do
+            {
+                ok = int.TryParse(Console.ReadLine(), out b);
+            } while (!ok);
 
             Console.ForegroundColor = ConsoleColor.Green;
             Console.WriteLine($"{a} + {b} = {a+b}");
