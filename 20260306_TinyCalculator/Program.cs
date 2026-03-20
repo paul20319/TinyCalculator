@@ -6,21 +6,9 @@
         {
             Console.WriteLine("Tiny calculator");
 
-            Console.Write("Summand 1: ");
-            int a = 0;
-            bool ok = false;
-            do
-            {
-                ok = int.TryParse(Console.ReadLine(), out a);
-            } while (!ok);
+            int a = ReadAndCheckOperator(1);
 
-            Console.Write("Summand 2: ");
-            int b = 0;
-            ok = false;
-            do
-            {
-                ok = int.TryParse(Console.ReadLine(), out b);
-            } while (!ok);
+            int b = ReadAndCheckOperator(2);
 
             Console.ForegroundColor = ConsoleColor.Green;
             Console.WriteLine($"{a} + {b} = {a+b}");
@@ -39,6 +27,19 @@
             }
             Console.ResetColor();
 
+        }
+        static int ReadAndCheckOperator(int countOperator)
+        {
+            Console.Write($"Operand {countOperator}: ");
+            int a = 0;
+            bool ok = false;
+            do
+            {
+                Console.Write($"Operand {countOperator}: ");
+                ok = int.TryParse(Console.ReadLine(), out a);
+            } while (!ok);
+
+            return a;
         }
     }
 }
