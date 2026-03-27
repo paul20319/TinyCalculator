@@ -25,6 +25,25 @@
             {
                 Console.WriteLine($"{a} / {b} = {(double)a / b}");
             }
+
+            Console.ForegroundColor = ConsoleColor.Magenta;
+            if (a == 0 && b == 0)
+            {
+                Console.WriteLine($"{a} ^ {b} = undefiniert (0^0)");
+            }
+            else
+            {
+                double result = Math.Pow(a, b);
+
+                if (b >= 0 && result % 1 == 0)
+                {
+                    Console.WriteLine($"{a} ^ {b} = {(long)result}");
+                }
+                else
+                {
+                    Console.WriteLine($"{a} ^ {b} = {result}");
+                }
+            }
             Console.ResetColor();
 
         }
